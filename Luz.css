@@ -49,6 +49,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 25px;
+  text-align: center ; 
 }
 
 .menu a {
