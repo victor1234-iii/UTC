@@ -25,7 +25,22 @@ body{
     padding: 15px 40px;
 }
 
-.logo img{
+/* LOGOS */
+.logo-izq {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-der {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
     height: 50px;
 }
 
