@@ -22,6 +22,7 @@ body{
     color: white;
     padding: 15px 20px;
 }
+
 /* LOGOS */
 .logo-izq {
     position: absolute;
@@ -140,11 +141,11 @@ ul li a:hover{
     text-align: center;
 }
 
-
+/* 🔥 CORREGIDO: imágenes iguales y sin deformar */
 .img-box img {
-    width: 105%;
-    height: 280px;       /* 🔥 MISMO ALTO PARA TODAS */
-  
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* IMPORTANTE */
     border-radius: 10px;
 }
 
@@ -157,4 +158,27 @@ footer{
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px){
+
+    .menu{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .contenedor{
+        width: 95%;
+    }
+
+    .img-box img{
+        height: 180px;
+    }
 }
