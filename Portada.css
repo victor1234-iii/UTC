@@ -1,4 +1,4 @@
-﻿/* =========================
+/* =========================
    RESET Y BASE
 ========================= */
 * {
@@ -14,24 +14,16 @@ body {
 }
 
 /* =========================
-   HEADER
+   HEADER (LOGOS EN ESQUINAS)
 ========================= */
 .header {
+    position: relative;
     background: #001936;
     color: white;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    padding: 15px 40px;
+    padding: 15px 20px;
 }
 
-.logo img {
-    height: 50px;
-}
-
-/* =========================
-   MENÚ
-========================= */
+/* MENÚ CENTRADO */
 .menu {
     display: flex;
     justify-content: center;
@@ -64,6 +56,25 @@ body {
 
 .menu a:hover {
     color: #00b4d8;
+}
+
+/* LOGOS */
+.logo-izq {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-der {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 50px;
 }
 
 /* =========================
@@ -111,13 +122,13 @@ body {
    OBJETIVO
 ========================= */
 .objetivo {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
-    background: rgba(186, 74, 56);
+    background: rgba(186, 74, 56, 0.8);
     padding: 15px;
     border-radius: 10px;
-    backdrop-filter: blur(5px);
 }
+
 /* =========================
    SLIDER AUTOMÁTICO
 ========================= */
@@ -148,18 +159,13 @@ body {
 
 /* ANIMACIÓN */
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
+
 /* =========================
-   PROYECTOS
+   CONTENEDOR
 ========================= */
-
-
 .contenedor {
     padding: 60px 40px;
 }
@@ -171,6 +177,9 @@ body {
     font-size: 28px;
 }
 
+/* =========================
+   PROYECTOS
+========================= */
 .proyectos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -206,32 +215,6 @@ body {
 /* =========================
    BOTONES
 ========================= */
-.card button {
-    background: #002855;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.card button:hover {
-    background: #00509d;
-    transform: scale(1.05);
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    background: #001936;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
 .btn {
     display: inline-block;
     background: #002855;
@@ -248,15 +231,24 @@ footer {
 }
 
 /* =========================
+   FOOTER
+========================= */
+footer {
+    background: #001936;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* =========================
    RESPONSIVE (CELULAR)
 ========================= */
 @media (max-width: 768px) {
 
-    /* HEADER */
     .header {
-        grid-template-columns: 1fr;
         text-align: center;
-        gap: 10px;
+        padding: 20px 10px;
     }
 
     .menu {
@@ -264,7 +256,10 @@ footer {
         gap: 10px;
     }
 
-    /* HERO */
+    .logo img {
+        height: 40px;
+    }
+
     .hero {
         height: auto;
         padding: 40px 20px;
@@ -278,30 +273,20 @@ footer {
         font-size: 16px;
     }
 
-    /* CONTENEDOR */
     .contenedor {
         width: 95%;
         padding: 10px;
     }
 
-    /* PROYECTOS */
     .proyectos {
         grid-template-columns: 1fr;
     }
 
-    /* CARDS */
     .card {
         padding: 15px;
     }
 
-    /* IMÁGENES */
-    .img-box img {
-        height: 180px;
-    }
-
-    /* SLIDER */
     .slide {
         width: 200px;
     }
-
 }
