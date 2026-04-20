@@ -45,23 +45,39 @@ body{
 /* =========================
    MENU
 ========================= */
-.menu{
+.menu {
     display: flex;
     justify-content: center;
     gap: 25px;
 }
 
-.menu a{
+.menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
     transition: 0.3s;
 }
 
-.menu a:hover{
-    color: #00b4d8;
+/* efecto línea animada */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00b4d8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #00b4d8;
+}
 /* =========================
    CONTENEDOR
 ========================= */
