@@ -246,3 +246,62 @@ footer {
     background: #00509d;
     transform: scale(1.05);
 }
+
+/* =========================
+   RESPONSIVE (CELULAR)
+========================= */
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .titulo-secundario {
+        font-size: 16px;
+    }
+
+    /* CONTENEDOR */
+    .contenedor {
+        width: 95%;
+        padding: 10px;
+    }
+
+    /* PROYECTOS */
+    .proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    /* CARDS */
+    .card {
+        padding: 15px;
+    }
+
+    /* IMÁGENES */
+    .img-box img {
+        height: 180px;
+    }
+
+    /* SLIDER */
+    .slide {
+        width: 200px;
+    }
+
+}
