@@ -264,34 +264,20 @@ footer {
 ========================= */
 @media (max-width: 768px) {
 
-    /* HEADER en columna */
     .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px;
+        text-align: center;
+        padding: 20px 10px;
     }
 
-    /* LOGOS ARRIBA */
-    .logo-izq,
-    .logo-der {
-        position: static;
-        transform: none;
+    .menu {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .logo img {
         height: 40px;
     }
 
-    /* MENÚ VERTICAL */
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    /* HERO adaptable */
     .hero {
         height: auto;
         padding: 40px 20px;
@@ -305,22 +291,19 @@ footer {
         font-size: 16px;
     }
 
-    /* CONTENEDOR */
     .contenedor {
         width: 95%;
+        padding: 10px;
     }
 
-    /* PROYECTOS */
     .proyectos {
         grid-template-columns: 1fr;
     }
 
-    /* IMÁGENES */
-    .img-box img {
-        height: 180px;
+    .card {
+        padding: 15px;
     }
 
-    /* SLIDER */
     .slide {
         width: 200px;
     }
