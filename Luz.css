@@ -16,71 +16,47 @@ body {
 /* =========================
    HEADER
 ========================= */
-.header {
-    position: relative;
-    background: #001936;
-    color: white;
-    padding: 15px 20px;
-}
+@media (max-width: 768px) {
 
-/* =========================
-   MENÚ CENTRADO
-========================= */
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: 0.3s;
-}
+    /* 🔥 LOGOS ARRIBA EN FILA */
+    .logo-izq,
+    .logo-der {
+        position: static;
+        transform: none;
+    }
 
-/* línea animada */
-.menu a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #00b4d8;
-    left: 0;
-    bottom: -5px;
-    transition: 0.3s;
-}
+    /* contenedor para logos */
+    .header {
+        gap: 10px;
+    }
 
-.menu a:hover::after {
-    width: 100%;
-}
+    /* opcional: acomodarlos en fila */
+    .logo-izq,
+    .logo-der {
+        display: inline-block;
+        margin: 5px;
+    }
 
-.menu a:hover {
-    color: #00b4d8;
-}
+    .logo img {
+        height: 40px;
+    }
 
-/* =========================
-   LOGOS
-========================= */
-.logo-izq {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    /* MENÚ */
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        position: static;
+        transform: none;
+    }
 }
-
-.logo-der {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.logo img {
-    height: 50px;
-}
-
 /* =========================
    HERO
 ========================= */
