@@ -1,13 +1,13 @@
 /* =========================
-   RESET
+   RESET Y BASE
 ========================= */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     line-height: 1.6;
@@ -23,34 +23,13 @@ body{
     padding: 15px 20px;
 }
 
-/* LOGOS */
-.logo-izq {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.logo-der {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.logo img {
-    height: 50px;
-}
-
 /* =========================
-   MENU
+   MENÚ CENTRADO
 ========================= */
 .menu {
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%); /* 🔥 CORREGIDO */
-   display: flex;
-   gap: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
 
 .menu a {
@@ -61,7 +40,7 @@ body{
     transition: 0.3s;
 }
 
-/* efecto línea animada */
+/* línea animada */
 .menu a::after {
     content: "";
     position: absolute;
@@ -82,27 +61,90 @@ body{
 }
 
 /* =========================
-   CONTENEDOR
+   LOGOS
 ========================= */
-.contenedor{
-    width: 90%;
-    max-width: 900px;
-    margin: 40px auto;
+.logo-izq {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-der {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 50px;
 }
 
 /* =========================
-   TITULO
+   HERO
 ========================= */
-h1{
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 30px;
-    color: #001936;
+    color: white;
+    padding: 20px;
+}
+
+.hero-contenido {
+    max-width: 800px;
+}
+
+/* =========================
+   TEXTOS HERO
+========================= */
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.titulo-secundario {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   OBJETIVO
+========================= */
+.objetivo {
+    font-size: 16px;
+    line-height: 1.6;
+    background: rgba(186, 74, 56, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
 }
 
 /* =========================
    TARJETAS
 ========================= */
-.card{
+.card {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -111,56 +153,52 @@ h1{
     transition: 0.3s;
 }
 
-.card:hover{
+.card:hover {
     transform: translateY(-5px);
 }
 
 /* =========================
    TEXTOS
 ========================= */
-h2{
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #001936;
+}
+
+h2 {
     color: #002855;
     margin-bottom: 10px;
 }
 
-p{
+p {
     margin-bottom: 10px;
 }
 
 /* =========================
    LISTAS
 ========================= */
-ul{
+ul {
     padding-left: 20px;
 }
 
-li{
+li {
     margin-bottom: 5px;
-}
-
-ul li a{
-    text-decoration: none;
-    color: #002855;
-}
-
-ul li a:hover{
-    color: #00509d;
 }
 
 /* =========================
    GALERIA
 ========================= */
-.galeria{
+.galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.img-box{
+.img-box {
     text-align: center;
 }
 
-/* imágenes iguales */
 .img-box img {
     width: 100%;
     height: 220px;
@@ -169,9 +207,36 @@ ul li a:hover{
 }
 
 /* =========================
+   PROYECTOS GRID
+========================= */
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn {
+    display: inline-block;
+    background: #002855;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00509d;
+    transform: scale(1.05);
+}
+
+/* =========================
    FOOTER
 ========================= */
-footer{
+footer {
     background: #001936;
     color: white;
     text-align: center;
@@ -182,9 +247,8 @@ footer{
 /* =========================
    RESPONSIVE (CELULAR)
 ========================= */
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-    /* HEADER en columna */
     .header {
         display: flex;
         flex-direction: column;
@@ -199,27 +263,37 @@ footer{
         transform: none;
     }
 
-    /* logos más pequeños */
     .logo img {
         height: 40px;
     }
 
-    /* menú vertical */
     .menu {
-        position: static;
-        transform: none;
         flex-direction: column;
-        align-items: center;
         gap: 10px;
     }
 
-    /* contenedor */
-    .contenedor{
+    .hero {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .titulo-secundario {
+        font-size: 16px;
+    }
+
+    .contenedor {
         width: 95%;
     }
 
-    /* imágenes más pequeñas */
-    .img-box img{
+    .proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .img-box img {
         height: 180px;
     }
 }
