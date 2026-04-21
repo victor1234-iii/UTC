@@ -16,47 +16,71 @@ body {
 /* =========================
    HEADER
 ========================= */
-@media (max-width: 768px) {
-
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px;
-    }
-
-    /* 🔥 LOGOS ARRIBA EN FILA */
-    .logo-izq,
-    .logo-der {
-        position: static;
-        transform: none;
-    }
-
-    /* contenedor para logos */
-    .header {
-        gap: 10px;
-    }
-
-    /* opcional: acomodarlos en fila */
-    .logo-izq,
-    .logo-der {
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .logo img {
-        height: 40px;
-    }
-
-    /* MENÚ */
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-        position: static;
-        transform: none;
-    }
+.header {
+    position: relative;
+    background: #001936;
+    color: white;
+    padding: 15px 20px;
 }
+
+/* =========================
+   LOGOS (ESQUINAS PC)
+========================= */
+.logo-izq {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo-der {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* =========================
+   MENÚ
+========================= */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* animación línea */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00b4d8;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #00b4d8;
+}
+
 /* =========================
    HERO
 ========================= */
@@ -103,9 +127,43 @@ body {
 .objetivo {
     font-size: 16px;
     line-height: 1.6;
-    background: rgba(186, 74, 56, 0.8);
+    background: rgba(186, 74, 56, 0.85);
     padding: 15px;
     border-radius: 10px;
+}
+
+/* =========================
+   SLIDER
+========================= */
+.slider {
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    padding: 20px 0;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 10);
+    animation: scroll 20s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    margin: 0 10px;
+}
+
+.slide img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* animación slider */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* =========================
@@ -113,28 +171,12 @@ body {
 ========================= */
 .contenedor {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
 }
 
 /* =========================
-   TARJETAS
-========================= */
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* =========================
-   TEXTOS
+   TITULOS
 ========================= */
 h1 {
     text-align: center;
@@ -147,39 +189,20 @@ h2 {
     margin-bottom: 10px;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
 /* =========================
-   LISTAS
+   TARJETAS
 ========================= */
-ul {
-    padding-left: 20px;
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    margin-bottom: 20px;
 }
 
-li {
-    margin-bottom: 5px;
-}
-
-/* =========================
-   GALERIA
-========================= */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.img-box {
-    text-align: center;
-}
-
-.img-box img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
+.card:hover {
+    transform: translateY(-8px);
 }
 
 /* =========================
@@ -210,6 +233,22 @@ li {
 }
 
 /* =========================
+   GALERIA
+========================= */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.img-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
@@ -225,14 +264,16 @@ footer {
 ========================= */
 @media (max-width: 768px) {
 
+    /* HEADER en columna */
     .header {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        padding: 15px;
     }
 
-    /* quitar posiciones absolutas */
+    /* LOGOS ARRIBA */
     .logo-izq,
     .logo-der {
         position: static;
@@ -243,11 +284,14 @@ footer {
         height: 40px;
     }
 
+    /* MENÚ VERTICAL */
     .menu {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
+    /* HERO adaptable */
     .hero {
         height: auto;
         padding: 40px 20px;
@@ -261,15 +305,23 @@ footer {
         font-size: 16px;
     }
 
+    /* CONTENEDOR */
     .contenedor {
         width: 95%;
     }
 
+    /* PROYECTOS */
     .proyectos {
         grid-template-columns: 1fr;
     }
 
+    /* IMÁGENES */
     .img-box img {
         height: 180px;
+    }
+
+    /* SLIDER */
+    .slide {
+        width: 200px;
     }
 }
