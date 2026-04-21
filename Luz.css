@@ -46,9 +46,9 @@ body{
    MENU
 ========================= */
 .menu {
-   position:absolute;
+   position: absolute;
    left: 50%;
-   transform: translateX(-50);
+   transform: translateX(-50%); /* 🔥 CORREGIDO */
    display: flex;
    gap: 25px;
 }
@@ -80,6 +80,7 @@ body{
 .menu a:hover {
     color: #00b4d8;
 }
+
 /* =========================
    CONTENEDOR
 ========================= */
@@ -159,11 +160,11 @@ ul li a:hover{
     text-align: center;
 }
 
-/* 🔥 CORREGIDO: imágenes iguales y sin deformar */
+/* imágenes iguales */
 .img-box img {
     width: 100%;
     height: 220px;
-    object-fit: cover; /* IMPORTANTE */
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -179,23 +180,45 @@ footer{
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (CELULAR)
 ========================= */
 @media (max-width: 768px){
 
-    .menu{
+    /* HEADER en columna */
+    .header {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
-    .logo img{
+    /* quitar posiciones absolutas */
+    .logo-izq,
+    .logo-der {
+        position: static;
+        transform: none;
+    }
+
+    /* logos más pequeños */
+    .logo img {
         height: 40px;
     }
 
+    /* menú vertical */
+    .menu {
+        position: static;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* contenedor */
     .contenedor{
         width: 95%;
     }
 
+    /* imágenes más pequeñas */
     .img-box img{
         height: 180px;
     }
