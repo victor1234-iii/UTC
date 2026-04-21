@@ -229,7 +229,21 @@ body {
     background: #00509d;
     transform: scale(1.05);
 }
+/* FOTOS CREADORES */
+.foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #002855;
+    transition: 0.3s;
+}
 
+.foto:hover {
+    transform: scale(1.1);
+}
 /* =========================
    FOOTER
 ========================= */
