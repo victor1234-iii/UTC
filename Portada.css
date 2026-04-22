@@ -230,27 +230,41 @@ body {
     transform: scale(1.05);
 }
 /* FOTOS CREADORES */
-.foto {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 10px;
-    border: 3px solid #002855;
-    transition: 0.3s;
+
+/* TEXTO */
+.descripcion-creadores {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.foto:hover {
-    transform: scale(1.1);
-}
-.creador img {
+/* FOTO CIRCULAR */
+.foto {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    object-fit: cover;       /* 🔥 IMPORTANTE */
-    object-position: center; /* centra la cara */
-    border: 3px solid #001936;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #002855;
+}
+
+/* PROFESOR DESTACADO */
+.profesor {
+    max-width: 300px;
+    margin: 0 auto 30px;
+    text-align: center;
+    border: 3px solid #00b4d8;
+    background: linear-gradient(135deg, #001936, #003566);
+    color: white;
+}
+
+.profesor h3 {
+    color: #00d4ff;
+}
+
+.profesor .foto {
+    border: 3px solid #00d4ff;
 }
 /* =========================
    FOOTER
