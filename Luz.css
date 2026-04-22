@@ -23,9 +23,7 @@ body {
     padding: 15px 20px;
 }
 
-/* =========================
-   LOGOS (ESQUINAS PC)
-========================= */
+/* LOGOS */
 .logo-izq {
     position: absolute;
     left: 20px;
@@ -61,7 +59,7 @@ body {
     transition: 0.3s;
 }
 
-/* animación línea */
+/* línea animada */
 .menu a::after {
     content: "";
     position: absolute;
@@ -102,9 +100,7 @@ body {
     max-width: 800px;
 }
 
-/* =========================
-   TEXTOS HERO
-========================= */
+/* TEXTOS HERO */
 .hero h1 {
     font-size: 45px;
     margin-bottom: 10px;
@@ -121,9 +117,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* =========================
-   OBJETIVO
-========================= */
+/* OBJETIVO */
 .objetivo {
     font-size: 16px;
     line-height: 1.6;
@@ -160,7 +154,6 @@ body {
     border-radius: 10px;
 }
 
-/* animación slider */
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -185,6 +178,7 @@ h1 {
 }
 
 h2 {
+    text-align: center;
     color: #002855;
     margin-bottom: 10px;
 }
@@ -198,7 +192,6 @@ h2 {
     border-radius: 15px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
     transition: 0.3s;
-    margin-bottom: 20px;
 }
 
 .card:hover {
@@ -206,7 +199,7 @@ h2 {
 }
 
 /* =========================
-   PROYECTOS GRID
+   GRID PROYECTOS / CREADORES
 ========================= */
 .proyectos {
     display: grid;
@@ -233,19 +226,34 @@ h2 {
 }
 
 /* =========================
-   GALERIA
+   CREADORES
 ========================= */
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+
+/* texto */
+.descripcion-creadores {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
 }
 
-.img-box img {
-    width: 100%;
-    height: 220px;
+/* fotos */
+.foto {
+    width: 120px;
+    height: 120px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    border: 3px solid #002855;
+}
+
+/* profesor destacado */
+.profesor {
+    max-width: 350px;
+    margin: 0 auto 30px;
+    text-align: center;
+    background: #e6f0ff;
+    border: 2px solid #002855;
 }
 
 /* =========================
@@ -266,12 +274,24 @@ footer {
 
     .header {
         text-align: center;
-        padding: 20px 10px;
+        padding: 40px 10px;
     }
 
     .menu {
         flex-direction: column;
         gap: 10px;
+    }
+
+    .logo-izq {
+        left: 10px;
+        top: 15px;
+        transform: none;
+    }
+
+    .logo-der {
+        right: 10px;
+        top: 15px;
+        transform: none;
     }
 
     .logo img {
@@ -306,5 +326,10 @@ footer {
 
     .slide {
         width: 200px;
+    }
+
+    .foto {
+        width: 90px;
+        height: 90px;
     }
 }
