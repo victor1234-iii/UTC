@@ -244,6 +244,14 @@ body {
 .foto:hover {
     transform: scale(1.1);
 }
+.creador img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;       /* 🔥 IMPORTANTE */
+    object-position: center; /* centra la cara */
+    border: 3px solid #001936;
+}
 /* =========================
    FOOTER
 ========================= */
