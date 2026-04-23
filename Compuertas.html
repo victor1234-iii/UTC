@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compuertas Lógicas</title>
+    <title>Compuertas LÃ³gicas</title>
     <link rel="stylesheet" href="Luz.css">
 </head>
 
@@ -11,114 +12,157 @@
 
 <!-- HEADER -->
 <header class="header">
+
     <div class="logo logo-izq">
-        <img src="UTC.png">
+        <img src="UTC.png" alt="Logo UTC">
     </div>
 
     <nav class="menu">
-        <a href="Index.html">Inicio</a>
-        <a href="#intro">Contenido</a>
+        <a href="index.html">Inicio</a>
+        <a href="index.html">Proyectos</a>
         <a href="#creadores">Creadores</a>
     </nav>
 
     <div class="logo logo-der">
-        <img src="Proyectologo.png">
+        <img src="Proyectologo.png" alt="Logo Proyectos">
     </div>
+
 </header>
 
 <div class="contenedor">
 
-    <h1>Sistema de Compuertas Lógicas con Control de Relé</h1>
+    <h1>ğŸ§  Compuertas LÃ³gicas con RelÃ©</h1>
 
-    <!-- INTRO -->
+    <!-- INDICE -->
+    <section class="card">
+        <h2>ğŸ“‘ Ãndice</h2>
+        <ul>
+            <li><a href="#intro">IntroducciÃ³n</a></li>
+            <li><a href="#objetivo">Objetivo</a></li>
+            <li><a href="#marco">Marco teÃ³rico</a></li>
+            <li><a href="#materiales">Materiales</a></li>
+            <li><a href="#funcionamiento">Funcionamiento</a></li>
+            <li><a href="#conclusion">ConclusiÃ³n</a></li>
+        </ul>
+    </section>
+
+    <!-- INTRODUCCIÃ“N -->
     <section id="intro" class="card">
-        <h2>Introducción</h2>
+        <h2>ğŸ“Œ IntroducciÃ³n</h2>
         <p>
-            Este proyecto consiste en la implementación de un sistema basado en
-            compuertas lógicas que permite controlar un relé para manejar
-            dispositivos eléctricos de mayor potencia utilizando señales de baja energía.
+            Este proyecto consiste en el desarrollo de un sistema basado en compuertas
+            lÃ³gicas que permite controlar un relÃ© para manejar dispositivos elÃ©ctricos
+            de mayor potencia utilizando seÃ±ales de baja energÃ­a.
+        </p>
+        <p>
+            A travÃ©s de este sistema se aplican conceptos de electrÃ³nica digital,
+            permitiendo automatizar procesos de forma segura y eficiente.
         </p>
     </section>
 
-    <!-- OBJETIVOS -->
-    <section class="card">
-        <h2>Objetivos</h2>
-        <ul>
-            <li>Diseñar un sistema funcional basado en compuertas lógicas</li>
-            <li>Comprender el uso del relé en sistemas electrónicos</li>
-            <li>Aplicar lógica binaria en circuitos reales</li>
-        </ul>
-    </section>
-
-    <!-- FUNCIONAMIENTO -->
-    <section class="card">
-        <h2>Funcionamiento</h2>
+    <!-- OBJETIVO -->
+    <section id="objetivo" class="card">
+        <h2>ğŸ¯ Objetivo</h2>
         <p>
-            El sistema trabaja con señales binarias (1 y 0). Dependiendo de las
-            combinaciones de entrada, las compuertas lógicas activan o desactivan
-            el relé, permitiendo controlar el paso de corriente.
+            DiseÃ±ar e implementar un sistema utilizando compuertas lÃ³gicas
+            para controlar un circuito mediante un relÃ©.
         </p>
+
+        <p><strong>Objetivos especÃ­ficos:</strong></p>
+        <ul>
+            <li>Comprender el funcionamiento de las compuertas lÃ³gicas</li>
+            <li>Aplicar lÃ³gica binaria en circuitos electrÃ³nicos</li>
+            <li>Construir un sistema funcional de control</li>
+        </ul>
     </section>
 
-    <!-- LOGICA -->
-    <section class="card">
-        <h2>Compuertas Utilizadas</h2>
-        <ul>
-            <li>Compuerta AND</li>
-            <li>Compuerta OR</li>
-            <li>Compuerta NOT</li>
-        </ul>
+    <!-- MARCO TEÃ“RICO -->
+    <section id="marco" class="card">
+        <h2>ğŸ“š Marco teÃ³rico</h2>
+        <p>
+            Las compuertas lÃ³gicas son dispositivos electrÃ³nicos que operan con
+            valores binarios (1 y 0), representando verdadero o falso.
+        </p>
+        <p>
+            Las principales compuertas utilizadas son:
+        </p>
+        <p>
+            AND: activa la salida si todas las entradas son verdaderas.<br>
+            OR: activa la salida si al menos una entrada es verdadera.<br>
+            NOT: invierte el valor de la entrada.
+        </p>
+        <p>
+            Estas compuertas permiten tomar decisiones dentro de un sistema electrÃ³nico.
+        </p>
     </section>
 
     <!-- MATERIALES -->
-    <section class="card">
-        <h2>Materiales</h2>
+    <section id="materiales" class="card">
+        <h2>ğŸ§° Materiales</h2>
         <ul>
             <li>Protoboard</li>
             <li>Cables jumper</li>
             <li>Resistencias</li>
-            <li>Relé</li>
+            <li>RelÃ©</li>
             <li>LEDs</li>
             <li>Transistor</li>
-            <li>Circuitos integrados (74LS08, 74LS32, 74LS04)</li>
-            <li>Fuente de alimentación</li>
+            <li>CI 74LS08 (AND)</li>
+            <li>CI 74LS32 (OR)</li>
+            <li>CI 74LS04 (NOT)</li>
+            <li>Fuente de alimentaciÃ³n 5V</li>
         </ul>
     </section>
 
-    <!-- CONCLUSION -->
-    <section class="card">
-        <h2>Conclusión</h2>
+    <!-- FUNCIONAMIENTO -->
+    <section id="funcionamiento" class="card">
+        <h2>âš™ï¸ Funcionamiento</h2>
         <p>
-            El proyecto demuestra la aplicación de compuertas lógicas en sistemas
-            reales, permitiendo automatizar procesos y controlar dispositivos de
-            forma eficiente y segura.
+            El sistema recibe seÃ±ales de entrada mediante interruptores,
+            las cuales son procesadas por las compuertas lÃ³gicas.
+        </p>
+        <p>
+            Dependiendo de la combinaciÃ³n de entradas, el relÃ© se activa
+            o desactiva, permitiendo controlar el paso de corriente.
+        </p>
+        <p>
+            Esto permite encender o apagar dispositivos de manera automÃ¡tica.
+        </p>
+    </section>
+
+    <!-- CONCLUSIÃ“N -->
+    <section id="conclusion" class="card">
+        <h2>âœ… ConclusiÃ³n</h2>
+        <p>
+            Este proyecto demuestra la aplicaciÃ³n de la lÃ³gica digital en
+            sistemas reales, permitiendo controlar dispositivos elÃ©ctricos
+            de manera eficiente mediante seÃ±ales simples.
         </p>
     </section>
 
     <!-- CREADORES -->
     <section id="creadores" class="contenedor">
-        <h2>Creadores</h2>
+        <h2>Creadores del Proyecto</h2>
 
         <div class="proyectos">
 
             <div class="card">
-                <h3>Daniel</h3>
-                <p><strong>Proyecto:</strong> Compuertas Lógicas</p>
+                <img src="Daniel.jpeg" class="foto">
+                <h3>ğŸ‘¤ Daniel</h3>
             </div>
 
             <div class="card">
-                <h3>Jaz</h3>
-                <p><strong>Proyecto:</strong> Compuertas Lógicas</p>
+                <img src="Jaz.jpeg" class="foto">
+                <h3>ğŸ‘¤ Jaz</h3>
             </div>
 
             <div class="card">
-                <h3>Leo</h3>
-                <p><strong>Proyecto:</strong> Compuertas Lógicas</p>
+                <img src="Leo.jpeg" class="foto">
+                <h3>ğŸ‘¤ Leo</h3>
             </div>
 
             <div class="card">
-                <h3>Alexis</h3>
-                <p><strong>Proyecto:</strong> Compuertas Lógicas</p>
+                <img src="Alexis.jpeg" class="foto">
+                <h3>ğŸ‘¤ Alexis</h3>
             </div>
 
         </div>
@@ -126,9 +170,13 @@
 
 </div>
 
+<!-- FOOTER -->
 <footer>
-    <p>Somos la generación del cambio</p>
+    <p>Somos la generaciÃ³n del cambio</p>
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
